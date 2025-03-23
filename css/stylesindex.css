@@ -1,0 +1,153 @@
+/* Main style*/
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #D3E8C8; 
+    text-align: center;
+}
+
+/* Header */
+header {
+    background-color: #C4C4C4;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+header img {
+    height: 200px;
+    width: auto;
+}
+/* Nav Bar*/
+nav {
+    display: flex;
+    justify-content: center;
+    flex-grow: 1;
+}
+
+nav a {
+    text-decoration: none;
+    font-weight: bold;
+    color: black;
+    margin: 0 15px;
+}
+/* Search box */
+input[type="text"] {
+    padding: 5px;
+    border: 1px solid #999;
+    border-radius: 5px;
+    width: 150px;
+}
+
+/* Main Content */
+section {
+    padding: 30px;
+}
+
+/* Health, Wellness, Support Cards */
+.section-container {
+    display: flex; 
+    justify-content: center;
+    align-items: flex-start; 
+    gap: 50px; 
+    flex-wrap: nowrap; 
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.card {
+    background-color: #B3A2FF; 
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    width: 300px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.card p {
+    color: black;
+    font-size: 14px;
+    margin-top: 10px;
+    line-height: 1.5;
+}
+
+/* Review Section */
+.review-section {
+    margin-top: 40px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.review-text {
+    font-style: italic;
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.review-box {
+    background-color: white;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.review-box h3 {
+    margin: 5px 0;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.review-box p {
+    font-size: 14px;
+    color: #333;
+}
+
+/* Contact Section */
+.contact-section {
+    margin-top: 50px;
+}
+
+.contact-section h2 {
+    font-size: 22px;
+    font-weight: bold;
+}
+/* Contact button */
+.contact-section button {
+    background-color: #E6E6E6; 
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.contact-section button:hover {
+    background-color: #d4d4d4;
+}
+
+/* Footer */
+footer {
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #D3E8C8;
+}
+
+footer span {
+    margin: 0 10px;
+}
