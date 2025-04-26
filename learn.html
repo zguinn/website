@@ -1,41 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-G0B4SHYWWK"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-G0B4SHYWWK');
+</script>
   <meta charset="UTF-8">
   <title>Astro Health and Wellness-Contact Us</title>
   <link rel="stylesheet" href="css/styleslearn.css">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Lato:wght@300;400&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      font-family: 'Lato', sans-serif;
+    }
+
+    h1, h2, h3 {
+      font-family: 'Playfair Display', serif;
+    }
+
+    nav a, input[type="text"], p, footer {
+      font-family: 'Poppins', sans-serif;
+    }
+  </style>
 </head>
 <body>
 
   <header>
     <div>
-        <img src= "logo.jpg" alt="astro logo" width="80" height="80">
-      </div>
+        <img src="logo.jpg" alt="astro logo" width="80" height="80">
+    </div>
 
     <nav>
       <a href="index.html">Home</a> |
       <a href="products.html">Products</a> |
-      <a href="#learn">Learn</a> |
+      <a href="learn.html">Learn</a> |
       <a href="ContactUs.html">Contact Us</a>
     </nav>
 
     <div>
-        <input type="text" placeholder="SEARCH">
-      </div>
-
+      <input type="text" placeholder="SEARCH">
+    </div>
   </header>
 
   <main>
-    <h1>LEARNING CONTENT COMING SOON!!!</h1>
+    <h1>VIDEOS FOR A HEALTHY LIFESTYLE</h1>
+  
+    <div class="video-container">
+      <iframe width="350" height="200" src="https://www.youtube.com/embed/LZviGy5bzBA" title="YouTube video 1" frameborder="0" allowfullscreen></iframe>
+      <iframe width="350" height="200" src="https://www.youtube.com/embed/v_Hd7ZyCBOs" title="YouTube video 2" frameborder="0" allowfullscreen></iframe>
+      <iframe width="350" height="200" src="https://www.youtube.com/embed/IA-UZ4Q7zs8" title="YouTube video 3" frameborder="0" allowfullscreen></iframe>
+      <iframe width="350" height="200" src="https://www.youtube.com/embed/ts3zesSyGDI" title="YouTube video 4" frameborder="0" allowfullscreen></iframe>
+    </div>
+  
+    <p style="text-align: center; font-weight: bold;">
+      <a href="bmi.html">Click Here to Find Your BMI</a>
+    </p>
+  </main>
 
-    <footer>
-        <div>
-          <img src= "facebooklogo.jpg" alt="facebooklogo" width="80" height="80" | 
-            </div>
-        <div>
-          <img src= "xlogo.jpg" alt="xlogo" width="80" height="80"
-            </div>
-      </footer>
-
-    </body>
-    </html>
+  <footer>
+    <div>
+      <img src= "facebooklogo.jpg" alt="facebooklogo" width="80" height="80" | 
+        </div>
+    <div>
+      <img src= "xlogo.jpg" alt="xlogo" width="80" height="80"
+        </div>
+  </footer>
+</body>
+</html>
