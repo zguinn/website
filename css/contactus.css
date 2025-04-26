@@ -44,32 +44,38 @@ input[type="text"] {
 /* Main Content */
 section {
     padding: 30px;
+    text-align: center;
+    line-height: 2;
 }S
 
 h1 {
     font-size: 2.5rem;
     text-transform: uppercase;
-    margin-bottom: 20px;
+    margin-bottom: 100px;
+    text-align: wrap;
+    width: auto
 }
 
-p {
-    font-size: 1.2rem;
-    line-height: 1.6;
-    text-align: center;
-}
+.form-container {
+    width: 400px; /* or whatever your form width is */
+    margin: 0 auto;
+    background: white; /* optional if you want a background */
+    padding: 20px;
+    border-radius: 8px;
+  }
 
 /* Contact Form */
 form {
     background: white;
-    padding: 20px;
+    padding: 40px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    max-width: 500px;
+    max-width: 400px;
     margin: 20px auto;
 }
 
 form p {
-    text-align: left;
+    text-align: center;
     font-size: 1rem;
 }
 /* text input area for form */
@@ -84,14 +90,16 @@ input, textarea {
 
 button {
     width: 100%;
-    padding: 10px;
+    padding: 15px;
     background-color: black;
     color: white;
     border: none;
-    border-radius: 5px;
+    border-radius: 20px;
     font-size: 1rem;
     cursor: pointer;
-}
+     
+}    
+
 
 button:hover {
     background-color: #333;
