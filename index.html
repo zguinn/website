@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- Google tag (gtag.js) -->
+    <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-G0B4SHYWWK"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
@@ -13,12 +13,27 @@
   <meta charset="UTF-8">
   <title>Astro Health and Wellness</title>
   <link rel="stylesheet" href="css/stylesindex.css">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Lato:wght@300;400&family=Montserrat:wght@500;700&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      font-family: 'Lato', sans-serif;
+    }
+
+    h1, h2, h3 {
+      font-family: 'Playfair Display', serif;
+    }
+
+    nav a, input[type="text"], p, footer {
+      font-family: 'Poppins', sans-serif;
+    }
+  </style>
 </head>
 <body>
 
   <header>
     <div>
-      <img src= "logo.jpg" alt="astro logo" width="80" height="80">
+      <img src="logo.jpg" alt="astro logo" width="120" height="120">
     </div>
     <nav>
       <a href="index.html">Home</a> |
@@ -26,23 +41,24 @@
       <a href="learn.html">Learn</a> |
       <a href="ContactUs.html">Contact Us</a>
     </nav>
-      <div>
-        <input type="text" placeholder="SEARCH">
-      </div>
-  </header>
-  <section>
     <div>
-      <div>
+      <input type="text" id="searchBox" placeholder="SEARCH">
+    </div>
+  </header>
+
+  <section>
+    <div class="section-container"> 
+      <div class="card">
         <img src="health.jpg" alt="health pic">
         <p>When it comes to health, there are many factors that can affect your physical, mental, and emotional state. We have just about everything you need to keep your health at its peak.</p>
       </div>
 
-      <div>
-        <img src="wellness.jpg" atl="wellness pic">
+      <div class="card">
+        <img src="wellness.jpg" alt="wellness pic">
         <p>Wellness means more than being healthy. It means looking for the just-right balance between nutrition, exercise, rest, and conscious choice.</p>
       </div>
 
-      <div>
+      <div class="card">
         <img src="support1.jpg" alt="support pic">
         <p>Support can come from your friends or family or even social media. Sometimes they aren’t what you need. Trust us to guide you on your health journey by stopping by our Learning page.</p>
       </div>
@@ -56,28 +72,77 @@
       You shouldn’t have to debate which matters more to you.
     </p>
 
-    <div>
-      <div>★★★★★</div>
-      <h3>Review title</h3>
-      <p>Review body</p>
-      <div>
-        <p>Reviewer name</p>
-        <p>Date</p>
+    <div style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap; padding: 20px;">
+      <div class="card" style="flex: 1; max-width: 300px; background-color: #f9f9f9; padding: 15px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+        <div>★★★★★</div>
+        <h3>Life-Changing Support</h3>
+        <p>Astro Health has completely transformed my wellness routine. Their resources are reliable and the guidance I received helped me sleep better and feel more energized.</p>
+        <div>
+          <p><strong>- Jordan M.</strong></p>
+          <p>April 2025</p>
+        </div>
+      </div>
+
+      <div class="card" style="flex: 1; max-width: 300px; background-color: #f9f9f9; padding: 15px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+        <div>★★★★★</div>
+        <h3>Fantastic Products</h3>
+        <p>The supplements and daily packs are high-quality and convenient. I've noticed a huge difference in my energy and focus since I started using them.</p>
+        <div>
+          <p><strong>- Alexis R.</strong></p>
+          <p>March 2025</p>
+        </div>
+      </div>
+
+      <div class="card" style="flex: 1; max-width: 300px; background-color: #f9f9f9; padding: 15px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+        <div>★★★★★</div>
+        <h3>Truly Trustworthy</h3>
+        <p>With so many wellness sites out there, Astro Health stands out with integrity. Their learning section and customer support are top-notch.</p>
+        <div>
+          <p><strong>- Marcus B.</strong></p>
+          <p>February 2025</p>
+        </div>
       </div>
     </div>
   </section>
 
   <section>
     <h2>ASK WHAT WE CAN DO FOR YOU!</h2>
-    <button>CONTACT US</button>
+    <button id="contactBtn">CONTACT US</button>
   </section>
 
   <footer>
     <div>
-      <span>Facebook icon</span>
-      <span>Instagram icon</span>
+      <img src="facebooklogo.jpg" alt="facebooklogo" width="80" height="80">
+    </div>
+    <div>
+      <img src="xlogo.jpg" alt="xlogo" width="80" height="80">
     </div>
   </footer>
+
+  <!-- JavaScript: Search functionality -->
+  <script>
+    document.getElementById('searchBox').addEventListener('keyup', function () {
+      const filter = this.value.toLowerCase();
+      const cards = document.querySelectorAll('.card');
+      
+      cards.forEach(card => {
+        const text = card.innerText.toLowerCase();
+        card.style.display = text.includes(filter) ? '' : 'none';
+      });
+    });
+  </script>
+
+  <!-- JavaScript: Contact button redirect -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const contactButton = document.getElementById("contactBtn");
+      if (contactButton) {
+        contactButton.addEventListener("click", function () {
+          window.location.href = "ContactUs.html";
+        });
+      }
+    });
+  </script>
 
 </body>
 </html>
