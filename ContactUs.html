@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- Google tag (gtag.js) -->
+    <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-G0B4SHYWWK"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
@@ -13,6 +13,14 @@
   <meta charset="UTF-8">
   <title>Astro Health and Wellness-Contact Us</title>
   <link rel="stylesheet" href="css/contactus.css">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Lato:wght@300;400&display=swap" rel="stylesheet">
+
+  <style>
+
+    nav a, input[type="text"], p, footer {
+      font-family: 'Poppins', sans-serif;
+    }
+  </style>
 </head>
 <body>
 
@@ -44,40 +52,55 @@
       Your satisfaction is our priority, and we’re happy to assist in any way we can!
     </p>
 
-    <form action="#" method="post">
+    <form
+      id="contactForm"
+      action="https://formspree.io/f/xyzwzdpz"
+      method="POST"
+    >
       <p>
-        <label for="name">Name:</label><br>
-        <input type="text" id="name" name="name">
+        <label for="firstname">First Name:</label><br>
+        <input type="text" id="name" name="input1">
       </p>
 
       <p>
-        <label for="patientOrProvider">Patient or Provider:</label><br>
-        <input type="text" id="patientOrProvider" name="patientOrProvider">
+        <label for="lastname">Last Name:</label><br>
+        <input type="text" id="patientOrProvider" name="input2">
       </p>
 
       <p>
         <label for="email">Email:</label><br>
-        <input type="email" id="email" name="email">
+        <input type="email" id="email" name="input3">
       </p>
 
       <p>
         <label for="message">Message:</label><br>
-        <textarea id="message" name="message" rows="5" cols="30"></textarea>
+        <textarea id="message" name="input4" rows="5" cols="30"></textarea>
       </p>
 
       <p>
-        <button type="submit">Submit</button>
+        <button name="button1" type="submit">Submit</button>
       </p>
     </form>
   </main>
 
   <footer>
-    <p>
-      <strong>Facebook Icon</strong> | 
-      <strong>Instagram Icon</strong>
-     
-    </p>
+    <div>
+      <img src= "facebooklogo.jpg" alt="facebooklogo" width="80" height="80" | 
+        </div>
+    <div>
+      <img src= "xlogo.jpg" alt="xlogo" width="80" height="80"
+        </div>
   </footer>
+
+  <script>
+    const form = document.getElementById('contactForm');
+
+    form.addEventListener('submit', function(event) {
+      setTimeout(() => {
+        form.reset();
+      }, 100);
+    });
+  </script>
 
 </body>
 </html>
